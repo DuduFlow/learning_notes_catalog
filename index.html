@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>訓練組課程｜學習筆記目錄</title>
+<meta name="description" content="訓練組 14 堂課程學習筆記總目錄，依能力地圖、日期、狀態與關鍵字快速查找。">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css?v=20260618">
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">訓練組課程・本季學習</span>
+        <h1>業務訓練<br><span>學習筆記</span> 總目錄</h1>
+        <p class="sub">把 14 堂課整理成可回查的學習入口：先看能力地圖，再依狀態、講師、主題或關鍵字快速找到對應筆記。</p>
+        <div class="stats">
+          <div class="stat"><b id="totalCount">14</b><span>本季課程</span></div>
+          <div class="stat"><b id="doneCount">2</b><span>筆記已完成</span></div>
+          <div class="stat"><b>06.09-09.08</b><span>課程期間</span></div>
+        </div>
+      </div>
+      <div class="progress-card" aria-label="筆記完成度">
+        <div class="progress-head"><span>筆記完成度</span><b id="pct">0%</b></div>
+        <div class="progress"><i id="bar"></i></div>
+      </div>
+    </div>
+  </header>
 
+  <nav class="toolbar" aria-label="課程篩選">
+    <div class="wrap toolbar-inner">
+      <input id="searchInput" class="search" type="search" placeholder="搜尋課程、講師、關鍵字：KYC、理賠、社群、高資產...">
+      <div id="statusChips" class="chips"></div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>能力地圖</h2>
+            <p>用學習任務來找課，比只看日期更快回到當下需要的能力。</p>
+          </div>
+          <span id="activePathLabel" class="result">目前顯示：全部能力</span>
+        </div>
+        <div id="pathGrid" class="path-grid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <h2>課程清單</h2>
+            <p>已完成的課程可直接進入筆記；未完成課程先保留主題與學習方向。</p>
+          </div>
+          <span id="resultCount" class="result"></span>
+        </div>
+        <div id="courseMount"></div>
+        <div id="emptyState" class="empty">沒有符合條件的課程，試著換一個關鍵字或篩選條件。</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <span>訓練組課程・學習筆記目錄</span>
+    <span>06.09-09.08 ｜ 共 14 堂</span>
+  </footer>
+
+<script src="js/main.js?v=20260618"></script>
+</body>
+</html>
