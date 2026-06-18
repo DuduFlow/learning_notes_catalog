@@ -11,6 +11,17 @@ learning_notes_catalog/
 │   └── style.css
 ├── js/
 │   └── main.js
+├── assets/
+│   └── favicons/
+│       ├── favicon.ico
+│       ├── favicon-16x16.png
+│       ├── favicon-32x32.png
+│       ├── apple-touch-icon.png
+│       ├── android-chrome-192x192.png
+│       ├── android-chrome-512x512.png
+│       └── mstile-150x150.png
+├── site.webmanifest
+├── browserconfig.xml
 ├── .nojekyll
 └── README.md
 ```
@@ -27,3 +38,4 @@ learning_notes_catalog/
 - 狀態篩選
 - 依月份自動分組
 - 課程資料集中在 `js/main.js` 的 `courses` 陣列，後續新增筆記連結只要更新該陣列
+- 已加入跨瀏覽器與裝置 favicon：一般瀏覽器、Apple Touch Icon、Android/Chrome Web App、Windows tile
