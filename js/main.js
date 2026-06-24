@@ -32,7 +32,8 @@ const courses = [
     title: '富邦之星',
     lecturer: '李孟珊',
     role: '業務經理',
-    status: 'next',
+    status: 'done',
+    url: 'https://duduflow.github.io/learning-Fubon_Star/',
     ability: 'mindset',
     desc: '富邦之星價值說明、面對挫折的處理、想像帶領一群富邦之星，以及行程安排與習慣維持。',
     tags: ['富邦之星', '挫折處理', '行程安排', '習慣維持']
