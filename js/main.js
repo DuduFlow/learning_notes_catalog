@@ -45,7 +45,8 @@ const courses = [
     title: '社群開發',
     lecturer: '詹呂欣蓓',
     role: '行銷襄理',
-    status: 'planned',
+    status: 'done',
+    url: 'https://duduflow.github.io/learning-social_media/',
     ability: 'marketing',
     desc: '如何設定發文頻率、設計連結鉤子，並掌握發文前、中、後的經營節奏。',
     tags: ['社群開發', '發文頻率', '連結鉤子', '內容節奏']
