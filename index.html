@@ -14,7 +14,7 @@
 <meta name="msapplication-TileColor" content="#f6f3ec">
 <meta name="msapplication-TileImage" content="assets/favicons/mstile-150x150.png">
 <meta name="msapplication-config" content="browserconfig.xml">
-<link rel="stylesheet" href="css/style.css?v=20260618">
+<link rel="stylesheet" href="css/style.css?v=20260707">
 </head>
 <body>
   <header class="hero">
@@ -25,7 +25,7 @@
         <p class="sub">把 14 堂課整理成可回查的學習入口：先看能力地圖，再依狀態、講師、主題或關鍵字快速找到對應筆記。</p>
         <div class="stats">
           <div class="stat"><b id="totalCount">14</b><span>本季課程</span></div>
-          <div class="stat"><b id="doneCount">4</b><span>筆記已完成</span></div>
+          <div class="stat"><b id="doneCount">5</b><span>筆記已完成</span></div>
           <div class="stat"><b>06.09-09.08</b><span>課程期間</span></div>
         </div>
       </div>
@@ -38,7 +38,10 @@
 
   <nav class="toolbar" aria-label="課程篩選">
     <div class="wrap toolbar-inner">
-      <input id="searchInput" class="search" type="search" placeholder="搜尋課程、講師、關鍵字：KYC、理賠、社群、高資產...">
+      <div class="search-wrap">
+        <input id="searchInput" class="search" type="search" placeholder="搜尋課程、講師、關鍵字：KYC、理賠、社群、高資產...（按 / 快速搜尋）">
+        <button id="searchClear" class="search-clear" aria-label="清除搜尋">✕</button>
+      </div>
       <div id="statusChips" class="chips"></div>
     </div>
   </nav>
@@ -77,6 +80,6 @@
     <span>06.09-09.08 ｜ 共 14 堂</span>
   </footer>
 
-<script src="js/main.js?v=20260630"></script>
+<script src="js/main.js?v=20260707"></script>
 </body>
 </html>

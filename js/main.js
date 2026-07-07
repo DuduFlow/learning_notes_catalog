@@ -58,10 +58,11 @@ const courses = [
     title: '九宮格（前）',
     lecturer: '陳昶宇',
     role: '行銷襄理',
-    status: 'planned',
+    status: 'done',
+    url: 'https://duduflow.github.io/learning-KYC_Jiugongge/',
     ability: 'kyc',
-    desc: '問句設計舉例示範，以類似案例拆解，帶學員用同一個案例練習 KYC 問句。',
-    tags: ['九宮格', '問句設計', 'KYC', '案例拆解']
+    desc: '訪談紀錄表七大指標與攻守配置：進攻算落差與急迫性、防守問偏好、決策者與競爭者，附問句庫與方小姐案例演練。',
+    tags: ['九宮格', '訪談紀錄表', '問句設計', 'KYC']
   },
   {
     no: 6,
@@ -70,7 +71,7 @@ const courses = [
     title: '好感型客戶經營',
     lecturer: '吳虹儀',
     role: '行銷襄理',
-    status: 'planned',
+    status: 'next',
     ability: 'relationship',
     desc: '判斷客戶意圖，設計應對方式，並練習面對拒絕時的回應與關係維持。',
     tags: ['客戶意圖', '好感經營', '拒絕處理', '應對']
@@ -320,3 +321,68 @@ updateStats();
 renderStatusChips();
 renderAbilityMap();
 renderCourses();
+
+/* ============================================================
+   Enhancement Layer — 卡片進場 / 數字滾動 / 搜尋UX / 回到頂部
+   ============================================================ */
+(function () {
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* 卡片與月份分隔線：捲動進場（重新篩選時也會重播） */
+  const orig = renderCourses;
+  renderCourses = function () {
+    orig();
+    resultCount.setAttribute('aria-live', 'polite');
+    if (reduce || !('IntersectionObserver' in window)) return;
+    const els = [...mount.querySelectorAll('.card, .month')];
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    }), { threshold: .08, rootMargin: '0px 0px -30px 0px' });
+    let i = 0;
+    els.forEach(el => {
+      el.classList.add('appear');
+      if (el.classList.contains('card')) { el.style.setProperty('--d', (i % 6) * .06 + 's'); i++; }
+      io.observe(el);
+    });
+  };
+  renderCourses();
+
+  /* 統計數字滾動 */
+  function countUp(el, target, suffix = '') {
+    if (!el) return;
+    if (reduce) { el.textContent = target + suffix; return; }
+    const t0 = performance.now();
+    (function tick(t) {
+      const k = Math.min((t - t0) / 700, 1);
+      el.textContent = Math.round(target * (1 - Math.pow(1 - k, 3))) + suffix;
+      if (k < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+  const done = courses.filter(c => c.status === 'done').length;
+  countUp(document.getElementById('totalCount'), courses.length);
+  countUp(document.getElementById('doneCount'), done);
+  countUp(document.getElementById('pct'), Math.round(done / courses.length * 100), '%');
+
+  /* 搜尋：清除鈕＋「/」快速聚焦 */
+  const clearBtn = document.getElementById('searchClear');
+  if (clearBtn) {
+    const upd = () => clearBtn.classList.toggle('show', !!searchInput.value);
+    searchInput.addEventListener('input', upd);
+    clearBtn.addEventListener('click', () => {
+      searchInput.value = ''; query = ''; upd(); renderCourses(); searchInput.focus();
+    });
+    upd();
+  }
+  addEventListener('keydown', e => {
+    if (e.key === '/' && document.activeElement !== searchInput) { e.preventDefault(); searchInput.focus(); }
+  });
+
+  /* 回到頂部 */
+  const top = document.createElement('button');
+  top.className = 'to-top';
+  top.setAttribute('aria-label', '回到頂部');
+  top.textContent = '↑';
+  top.onclick = () => scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  document.body.appendChild(top);
+  addEventListener('scroll', () => top.classList.toggle('show', scrollY > 500), { passive: true });
+})();
