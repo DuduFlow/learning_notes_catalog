@@ -71,7 +71,8 @@ const courses = [
     title: '好感型客戶經營',
     lecturer: '吳虹儀',
     role: '行銷襄理',
-    status: 'next',
+    status: 'done',
+    url: 'https://duduflow.github.io/learning-Favorable_Customers-/',
     ability: 'relationship',
     desc: '判斷客戶意圖，設計應對方式，並練習面對拒絕時的回應與關係維持。',
     tags: ['客戶意圖', '好感經營', '拒絕處理', '應對']
