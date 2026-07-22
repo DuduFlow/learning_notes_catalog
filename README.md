@@ -32,6 +32,7 @@ learning_notes_catalog/
 - 06/16 銷售自我：https://duduflow.github.io/learning-sales_self/
 - 06/23 富邦之星：https://duduflow.github.io/learning-Fubon_Star/
 - 07/14 好感型客戶經營：https://duduflow.github.io/learning-Favorable_Customers-/
+- 07/21 故事行銷：https://duduflow.github.io/learning-story_marketing/
 
 ## 功能
 

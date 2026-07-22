@@ -84,7 +84,8 @@ const courses = [
     title: '故事行銷',
     lecturer: '張恩煒',
     role: '行銷襄理',
-    status: 'planned',
+    status: 'done',
+    url: 'https://duduflow.github.io/learning-story_marketing/',
     ability: 'marketing',
     desc: '練習說故事的技巧，並把故事轉成能延伸保險需求與客戶議題的對話入口。',
     tags: ['故事行銷', '故事轉議題', '表達技巧']
