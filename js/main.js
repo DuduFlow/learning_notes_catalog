@@ -92,30 +92,19 @@ const courses = [
   },
   {
     no: 8,
-    date: '07/28',
-    month: '07',
-    title: '客戶開發',
-    lecturer: '王昱文',
-    role: '業務襄理',
-    status: 'planned',
-    ability: 'marketing',
-    desc: '找到開發切入點與契機點，例如如何把陌生行銷電話連結成後續行銷機會。',
-    tags: ['客戶開發', '切入點', '契機點', '陌生開發']
-  },
-  {
-    no: 9,
     date: '08/04',
     month: '08',
     title: '話題轉議題',
     lecturer: '周純伃',
     role: '行銷經理',
-    status: 'planned',
+    status: 'done',
+    url: 'https://duduflow.github.io/learning-topic_to_issue/',
     ability: 'marketing',
     desc: '選擇能自然延伸的生活話題，進一步轉成銷售議題，並判斷適合的銷售族群。',
     tags: ['話題選擇', '議題轉換', '銷售族群']
   },
   {
-    no: 10,
+    no: 9,
     date: '08/11',
     month: '08',
     title: '條款理賠與案例導讀（上）',
@@ -127,7 +116,7 @@ const courses = [
     tags: ['條款理賠', '實支實付', '急診理賠', '案例導讀']
   },
   {
-    no: 11,
+    no: 10,
     date: '08/18',
     month: '08',
     title: '條款理賠與案例導讀（下）',
@@ -139,7 +128,7 @@ const courses = [
     tags: ['條款理賠', '手術定義', '理賠溝通', '案例展示']
   },
   {
-    no: 12,
+    no: 11,
     date: '08/25',
     month: '08',
     title: '投資財富',
@@ -151,7 +140,7 @@ const courses = [
     tags: ['投資財富', '資產配置', '財商建立', '客戶管理']
   },
   {
-    no: 13,
+    no: 12,
     date: '09/01',
     month: '09',
     title: '高資產客戶',
@@ -163,7 +152,7 @@ const courses = [
     tags: ['高資產', '成交起手式', '客戶經營']
   },
   {
-    no: 14,
+    no: 13,
     date: '09/08',
     month: '09',
     title: '九宮格（後）',
@@ -187,7 +176,7 @@ const statusMeta = {
 const abilityMap = [
   { id: 'all', no: '全', title: '全部能力', desc: '依日期瀏覽完整課表' },
   { id: 'mindset', no: '1', title: '心態與自我品牌', desc: '目標、心態、銷售自我、富邦之星' },
-  { id: 'marketing', no: '2', title: '開發與社群行銷', desc: '社群、故事、開發、話題轉議題' },
+  { id: 'marketing', no: '2', title: '開發與社群行銷', desc: '社群開發、故事行銷、話題轉議題' },
   { id: 'kyc', no: '3', title: 'KYC 與問句設計', desc: '九宮格、案例拆解、問句設計' },
   { id: 'relationship', no: '4', title: '客戶經營與拒絕處理', desc: '判斷意圖、應對、好感型經營' },
   { id: 'service', no: '5', title: '專業服務與理賠', desc: '條款導讀、理賠案例、改革重點' },
