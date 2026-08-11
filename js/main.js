@@ -110,10 +110,11 @@ const courses = [
     title: '條款理賠與案例導讀（上）',
     lecturer: '鄭占禮',
     role: '處經理',
-    status: 'planned',
+    status: 'done',
+    url: 'https://duduflow.github.io/learning-terms_claims_1/',
     ability: 'service',
-    desc: '重大保險改革、實支實付變革、急診理賠、住院與門診手術、條款導讀與理賠案例展示。',
-    tags: ['條款理賠', '實支實付', '急診理賠', '案例導讀']
+    desc: '實支實付大事紀與 113 年新制、HSV 條款逐條解剖、五大給付項目、除外責任與生產條款，附理賠判斷測驗與三代條款試算。',
+    tags: ['條款理賠', '實支實付', '113年新制', '手術認定', '保單健檢']
   },
   {
     no: 10,
