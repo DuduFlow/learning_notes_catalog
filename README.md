@@ -33,6 +33,8 @@ learning_notes_catalog/
 - 06/23 富邦之星：https://duduflow.github.io/learning-Fubon_Star/
 - 07/14 好感型客戶經營：https://duduflow.github.io/learning-Favorable_Customers-/
 - 07/21 故事行銷：https://duduflow.github.io/learning-story_marketing/
+- 08/11 條款理賠與案例導讀（上）：https://duduflow.github.io/learning-terms_claims_1/
+- 08/18 條款理賠與案例導讀（下）：https://duduflow.github.io/learning-terms_claims_2/
 
 ## 功能
 

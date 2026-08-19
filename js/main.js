@@ -123,10 +123,11 @@ const courses = [
     title: '條款理賠與案例導讀（下）',
     lecturer: '鄭占禮',
     role: '處經理',
-    status: 'planned',
+    status: 'done',
+    url: 'https://duduflow.github.io/learning-terms_claims_2/',
     ability: 'service',
-    desc: '延續條款導讀與案例展示，聚焦急診理賠、住院與門診手術、改革後的理賠溝通重點。',
-    tags: ['條款理賠', '手術定義', '理賠溝通', '案例展示']
+    desc: '拆解病房、雜費與手術三個費用口袋，涵蓋婦科、白內障、兒童熱性痙攣、意外膝關節、牙科與重大傷病案例，附情境測驗、費用落點試算與理賠前五問。',
+    tags: ['條款理賠', '費用歸類', '手術比例', '重大傷病', '理賠前五問']
   },
   {
     no: 11,
