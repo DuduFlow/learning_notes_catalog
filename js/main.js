@@ -133,13 +133,14 @@ const courses = [
     no: 11,
     date: '08/25',
     month: '08',
-    title: '投資財富',
+    title: '成交Ｕ之後',
     lecturer: '洪敬忠',
     role: '分處經理',
-    status: 'planned',
+    status: 'done',
+    url: 'https://duduflow.github.io/learning-U-next/',
     ability: 'wealth',
-    desc: '設定投資標靶、管理客戶，用有限金額規劃投資方向，並理解從零到投資千萬的模組與溝通模式。',
-    tags: ['投資財富', '資產配置', '財商建立', '客戶管理']
+    desc: '成交後延伸下一訪，串接下跌加碼、V 系列、醫療險補強與通路合作；附五訪流程地圖、對話演練與下一訪計畫。',
+    tags: ['成交Ｕ之後', '投資財富', '下一訪', '下跌加碼', '醫療險', '通路合作']
   },
   {
     no: 12,
